@@ -1,0 +1,792 @@
+/* undohtml.css */
+/* (CC) 2004 Tantek Celik. Some Rights Reserved.             */
+/*   http://creativecommons.org/licenses/by/2.0                   */
+/* This style sheet is licensed under a Creative Commons License. */
+
+/* Purpose: undo some of the default styling of common (X)HTML browsers */
+
+
+/* link underlines tend to make hypertext less readable, 
+   because underlines obscure the shapes of the lower halves of words */
+:link,
+:visited {
+    text-decoration: none
+}
+
+/* no list-markers by default, since lists are used more often for semantics */
+ul,
+ol {
+    list-style: none
+}
+
+/* avoid browser default inconsistent heading font-sizes */
+/* and pre/code too */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code {
+    font-size: 1em;
+}
+
+/* remove the inconsistent (among browsers) default ul,ol padding or margin  */
+/* the default spacing on headings does not match nor align with 
+         normal interline spacing at all, so let's get rid of it. */
+/* zero out the spacing around pre, form, body, html, p, blockquote as well */
+/* form elements are oddly inconsistent, and not quite CSS emulatable. */
+/*  nonetheless strip their margin and padding as well */
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+body,
+html,
+p,
+blockquote,
+fieldset,
+input {
+    margin: 0;
+    padding: 0
+}
+
+/* whoever thought blue linked image borders were a good idea? */
+a img,
+:link img,
+:visited img {
+    border: none
+}
+
+/* de-italicize address */
+address {
+    font-style: normal
+}
+
+
+/* more varnish stripping as necessary... */
+
+/************************************************************************************************************************************************************************/
+.sayfa {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sayfa .alt {
+    display: flex;
+}
+
+.sayfa .baslik {
+    width: 1536px;
+    height: 50px;
+    display: flex;
+    background: #2f3c48;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.sayfa .fa-align-justify {
+    width: 40px;
+    color: #fafbfb;
+    font-size: 17px;
+    padding-top: 5px;
+}
+
+.sayfa .baslik .marka {
+    white-space: nowrap;
+    color: #fafbfb;
+}
+
+.sayfa .baslik .marka #sap {
+    letter-spacing: -4px;
+    /*harfler arası boşluk*/
+    font-weight: bold;
+    font-size: 20px;
+    word-spacing: -20px;
+}
+
+.sayfa .baslik .marka #cloud {
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.sayfa .baslik .bildirim {
+    display: flex;
+    color: #c1e2fb;
+    width: 240px;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 50px;
+}
+
+.sayfa .baslik .bildirim #sayi {
+    position: absolute;
+    margin-left: -84px;
+    margin-top: -8px;
+    border-radius: 20px;
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 5px;
+    width: 9px;
+    height: 9px;
+    background: #267027;
+    color: white;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Kenar cubuğu*/
+.sayfa .kenarcubugu {
+    width: 230px;
+    height: 672px;
+    text-align: center;
+    align-items: center;
+    background: #394958;
+    font-size: 15px;
+}
+
+.sayfa .fa-cube {
+    color: #e5e8e9;
+}
+
+.sayfa .kenarcubugu .applications {
+    /*border: 1px solid #aaaaaa;*/
+    display: flex;
+    box-sizing: border-box;
+    color: #e5e8e9;
+    width: 230px;
+    height: 40px;
+    justify-content: start;
+    padding: 10px;
+    align-items: center;
+}
+
+.sayfa .kenarcubugu .applications span {
+    padding-left: 10px;
+}
+
+.sayfa .kenarcubugu .services {
+    display: flex;
+    box-sizing: border-box;
+    color: #e5e8e9;
+    width: 230px;
+    height: 40px;
+    justify-content: start;
+    padding: 10px;
+    align-items: center;
+}
+
+.sayfa .kenarcubugu .services span {
+    padding-left: 8px;
+}
+
+.sayfa .kenarcubugu .services .fa-chevron-down {
+    padding-left: 100px;
+}
+
+.sayfa .kenarcubugu .marketplace {
+    width: 230px;
+    height: 40px;
+    background: #496b8a;
+    flex-direction: column;
+    display: flex;
+    box-sizing: border-box;
+    color: #e5e8e9;
+    justify-content: start;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.sayfa .kenarcubugu .marketplace span {
+    padding-top: 10px;
+}
+
+.sayfa .kenarcubugu .instances {
+    width: 230px;
+    height: 40px;
+    flex-direction: column;
+    display: flex;
+    box-sizing: border-box;
+    color: #e5e8e9;
+    justify-content: start;
+    align-items: center;
+    margin-top: 10px;
+    padding-right: 27px;
+}
+
+.sayfa .kenarcubugu .user {
+    width: 230px;
+    height: 40px;
+    flex-direction: column;
+    display: flex;
+    box-sizing: border-box;
+    color: #e5e8e9;
+    justify-content: start;
+    align-items: center;
+    padding-left: 13px;
+}
+
+.sayfa .kenarcubugu .saphana {
+    border: 1px solid #496b8a;
+    display: flex;
+    box-sizing: border-box;
+    color: #e5e8e9;
+    width: 230px;
+    height: 40px;
+    justify-content: start;
+    padding: 10px;
+    align-items: center;
+    background: #3f5161;
+    white-space: nowrap;
+}
+
+.sayfa .kenarcubugu .saphana span {
+    padding-left: 10px;
+}
+
+.sayfa .kenarcubugu .saphana .fa-chevron-right {
+    padding-left: 90px;
+}
+
+.sayfa .kenarcubugu .portal {
+    border: 1px solid #496b8a;
+    display: flex;
+    box-sizing: border-box;
+    color: #e5e8e9;
+    width: 230px;
+    height: 40px;
+    justify-content: start;
+    padding: 10px;
+    align-items: center;
+    background: #3f5161;
+    white-space: nowrap;
+}
+
+.sayfa .kenarcubugu .portal span {
+    padding-left: 12px;
+}
+
+.sayfa .kenarcubugu .routes {
+    border: 1px solid #496b8a;
+    display: flex;
+    box-sizing: border-box;
+    color: #e5e8e9;
+    width: 230px;
+    height: 40px;
+    justify-content: start;
+    padding: 10px;
+    align-items: center;
+    background: #3f5161;
+    white-space: nowrap;
+}
+
+.sayfa .kenarcubugu .routes span {
+    padding-left: 10px;
+}
+
+.sayfa .kenarcubugu .security {
+    border: 1px solid #496b8a;
+    display: flex;
+    box-sizing: border-box;
+    color: #e5e8e9;
+    width: 230px;
+    height: 40px;
+    justify-content: start;
+    padding: 10px;
+    align-items: center;
+    background: #3f5161;
+    white-space: nowrap;
+}
+
+.sayfa .kenarcubugu .security span {
+    padding-left: 10px;
+}
+
+.sayfa .kenarcubugu .events {
+    border: 1px solid #496b8a;
+    display: flex;
+    box-sizing: border-box;
+    color: #e5e8e9;
+    width: 230px;
+    height: 40px;
+    justify-content: start;
+    padding: 10px;
+    align-items: center;
+    background: #3f5161;
+    white-space: nowrap;
+}
+
+.sayfa .kenarcubugu .events span {
+    padding-left: 18px;
+}
+
+.sayfa .kenarcubugu .members {
+    border: 1px solid #496b8a;
+    display: flex;
+    box-sizing: border-box;
+    color: #e5e8e9;
+    width: 230px;
+    height: 40px;
+    justify-content: start;
+    padding: 10px;
+    align-items: center;
+    background: #3f5161;
+    white-space: nowrap;
+}
+
+.sayfa .kenarcubugu .members span {
+    padding-left: 10px;
+}
+
+.sayfa .kenarcubugu hr {
+    position: absolute;
+    display: flex;
+    height: 5px;
+    width: 220px;
+    border: 0;
+    border-top: 1px solid #058cc7;
+    margin-top: 125px;
+}
+
+.sayfa .kenarcubugu .useful {
+    border: 1px solid #496b8a;
+    display: flex;
+    box-sizing: border-box;
+    color: #e5e8e9;
+    width: 230px;
+    height: 40px;
+    justify-content: start;
+    padding: 10px;
+    align-items: center;
+    background: #3f5161;
+    white-space: nowrap;
+    margin-top: 140px;
+}
+
+.sayfa .kenarcubugu .useful span {
+    padding-left: 13px;
+}
+
+.sayfa .kenarcubugu .legal {
+    border: 1px solid #496b8a;
+    display: flex;
+    box-sizing: border-box;
+    color: #e5e8e9;
+    width: 230px;
+    height: 40px;
+    justify-content: start;
+    padding: 10px;
+    align-items: center;
+    background: #3f5161;
+    white-space: nowrap;
+}
+
+.sayfa .kenarcubugu .legal span {
+    padding-left: 10px;
+}
+
+/*İÇERİK*/
+.sayfa .icerik .link {
+    display: flex;
+    width: 1000px;
+    height: 40px;
+    text-indent: 10px;
+    margin: 10px;
+    margin-left: 20px;
+    color: #1a7eb8;
+}
+
+.fa-globe-europe {
+    margin-left: 8px;
+}
+
+.sayfa .icerik .link .fa-chevron-down {
+    margin-left: 8px;
+}
+
+.fa-images {
+    margin-left: 8px;
+}
+
+.fa-network-wired {
+    margin-left: 8px;
+}
+
+.fa-calendar {
+    margin-left: 8px;
+}
+
+#a {
+    color: #e2e2e2;
+    font-weight: bold;
+}
+
+.sayfa .icerik .baslik2 {
+    display: flex;
+    text-indent: 10px;
+    margin: 10px;
+    margin-left: 25px;
+    font-size: 22px;
+    font-weight: 540;
+    color: #393939;
+    white-space: nowrap;
+    text-align: center;
+    align-items: center;
+}
+
+.sayfa .icerik .baslik2 span {
+    margin-left: 5px;
+}
+
+.sayfa .icerik .baslik2 #all {
+    position: absolute;
+    font-size: 16px;
+    margin-top: 25px;
+    color: #868686;
+}
+
+.sayfa .icerik .baslik2 .fa-question-circle {
+    margin-left: 800px;
+    color: #446d90;
+    font-size: 18px;
+}
+
+.sayfa .icerik .search {
+    margin-left: 1000px;
+    margin-bottom: 12px;
+    justify-content: end;
+}
+
+.sayfa .icerik .search span {
+    display: flex;
+    margin-top: 80px;
+    height: 30px;
+    width: 250px;
+    border: 1px solid #aaaaaa;
+    color: #989898;
+    font-style: italic;
+    font-size: 15px;
+    align-items: center;
+    text-align: center;
+    padding-left: 12px;
+}
+
+.sayfa .icerik .icerik2 {
+    height: 450px;
+    width: 1300px;
+    background: #fafafa;
+}
+
+.sayfa .icerik .icerik2 .satir1 {
+    display: flex;
+    width: 1300px;
+    justify-content: space-around;
+
+}
+
+/*Kutu1*/
+
+.sayfa .icerik .icerik2 .satir1 .kutu1 {
+    width: 250px;
+    height: 60px;
+    border: 1px solid #868686;
+    background: white;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center;
+    margin-top: 15px;
+    border-radius: 2px;
+    margin-left: 25px;
+}
+
+.sayfa .icerik .icerik2 .satir1 .kutu1 .kutu1baslik {
+    color: #1a7eb8;
+    margin-right: 150px;
+    margin-bottom: 40px;
+}
+
+.sayfa .icerik .icerik2 .satir1 .kutu1 .kutu1baslik #api {
+    
+    color: #868686;
+    font-size: 17px;
+}
+
+.sayfa .icerik .icerik2 .satir1 .kutu1 .kutu1icerik {
+    font-size: 18px;
+    color: #686868;
+    margin-bottom: 10px;
+}
+
+.sayfa .icerik .icerik2 .satir1 .kutu1 .fa-globe-europe {
+    position: absolute;
+    margin-left: -35px;
+    font-size: 30px;
+    color: #1a7eb8;
+}
+
+/*Kutu2*/
+.sayfa .icerik .icerik2 .satir1 .kutu2 {
+    width: 250px;
+    height: 60px;
+    border: 1px solid #868686;
+    background: white;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center;
+
+    margin-top: 15px;
+    border-radius: 2px;
+}
+
+.sayfa .icerik .icerik2 .satir1 .kutu2 .kutu2baslik {
+    color: #1a7eb8;
+    position: absolute;
+    margin-left: -55px;
+    margin-top: -70px;
+
+}
+
+.sayfa .icerik .icerik2 .satir1 .kutu2 .kutu2baslik #auto {
+    color: #868686;
+    font-size: 17px;
+}
+
+.sayfa .icerik .icerik2 .satir1 .kutu2 .kutu2icerik {
+    font-size: 18px;
+    color: #686868;
+    margin-left: 30px;
+    margin-top: 50px;
+
+}
+
+.sayfa .icerik .icerik2 .satir1 .kutu2 .fa-expand,
+.fa-expand-alt {
+    position: absolute;
+    margin-left: -35px;
+    font-size: 30px;
+    color: #686868;
+}
+
+.fa-expand-alt {
+    color: #1a7eb8;
+}
+
+/*kutu3*/
+.sayfa .icerik .icerik2 .satir1 .kutu3 {
+    width: 250px;
+    height: 60px;
+    border: 1px solid #868686;
+    background: white;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center;
+    margin-right: 50px;
+    margin-top: 15px;
+    border-radius: 2px;
+}
+
+.sayfa .icerik .icerik2 .satir1 .kutu3 .kutu3baslik {
+    color: #1a7eb8;
+    position: absolute;
+    margin-left: -65px;
+    margin-top: -70px;
+
+}
+
+.sayfa .icerik .icerik2 .satir1 .kutu3 .kutu3baslik #log {
+    color: #868686;
+    font-size: 17px;
+}
+
+.sayfa .icerik .icerik2 .satir1 .kutu3 .kutu3icerik {
+    font-size: 18px;
+    color: #686868;
+    margin-left: 40px;
+    margin-top: 50px;
+}
+
+.sayfa .icerik .icerik2 .satir1 .kutu3 .kutu3icerik p {
+    margin-left: 10px;
+}
+
+.sayfa .icerik .icerik2 .satir1 .kutu3 .fa-file-signature {
+    position: absolute;
+    margin-left: -35px;
+    font-size: 30px;
+    color: #686868;
+}
+
+.sayfa .icerik .icerik2 .satir2 {
+    display: flex;
+    justify-content: space-around;
+    width: 1250px;
+}
+
+/*Kutu4*/
+
+.sayfa .icerik .icerik2 .satir2 .kutu4 {
+    width: 250px;
+    height: 60px;
+    border: 1px solid #868686;
+    background: white;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center;
+    margin-top: 15px;
+    border-radius: 2px;
+    margin-left: 25px;
+}
+
+.sayfa .icerik .icerik2 .satir2 .kutu4 .kutu4baslik {
+    color: #1a7eb8;
+
+    margin-bottom: 140px;
+}
+
+.sayfa .icerik .icerik2 .satir2 .kutu4 .kutu4baslik #xsuaa {
+    position: absolute;
+    color: #868686;
+    font-size: 17px;
+    margin-left: -360px;
+}
+
+.sayfa .icerik .icerik2 .satir2 .kutu4 .kutu4icerik {
+    position: absolute;
+    font-size: 18px;
+    color: #686868;
+    margin-bottom: 40px;
+}
+
+.sayfa .icerik .icerik2 .satir2 .kutu4 .fa-user-lock {
+    position: absolute;
+    margin-left: -180px;
+    font-size: 30px;
+    color: #1a7eb8;
+}
+
+.sayfa .icerik .icerik2 .satir2 .kutu4 p {
+    position: absolute;
+    margin-left: -135px;
+
+}
+
+/*kutu5*/
+.sayfa .icerik .icerik2 .satir2 .kutu5 {
+    width: 250px;
+    height: 60px;
+    border: 1px solid #868686;
+    background: white;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center;
+    margin-top: 15px;
+    border-radius: 2px;
+}
+
+.sayfa .icerik .icerik2 .satir2 .kutu5 .kutu5baslik {
+    color: #1a7eb8;
+    position: absolute;
+    margin-left: -90px;
+    margin-top: -70px;
+}
+
+.sayfa .icerik .icerik2 .satir2 .kutu5 .kutu5baslik #busines {
+    color: #868686;
+    font-size: 17px;
+}
+
+.sayfa .icerik .icerik2 .satir2 .kutu5 .kutu5icerik {
+    font-size: 18px;
+    color: #686868;
+    margin-left: -145px;
+    margin-top: 30px;
+}
+
+.sayfa .icerik .icerik2 .satir2 .kutu5 .kutu5icerik .fa-puzzle-piece {
+    position: absolute;
+    margin-left: -35px;
+    font-size: 30px;
+    color: #686868;
+}
+
+.sayfa .icerik .icerik2 .satir2 .kutu5 .kutu5icerik span{
+    margin-left: 10px;
+}
+
+/*kutu6*/
+.sayfa .icerik .icerik2 .satir2 .kutu6 {
+    width: 250px;
+    height: 60px;
+    border: 1px solid #868686;
+    background: white;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center;
+    margin-top: 15px;
+    border-radius: 2px;
+}
+
+.sayfa .icerik .icerik2 .satir2 .kutu6 .kutu6baslik {
+    color: #1a7eb8;
+    position: absolute;
+    margin-left: -100px;
+    margin-top: -70px;
+}
+
+.sayfa .icerik .icerik2 .satir2 .kutu6 .kutu6baslik #connect {
+    color: #868686;
+    font-size: 17px;
+   
+}
+
+.sayfa .icerik .icerik2 .satir2 .kutu6 .kutu6icerik {
+    font-size: 18px;
+    color: #686868;
+    margin-left: 20px;
+    margin-top: 80px;
+}
+
+.sayfa .icerik .icerik2 .satir2 .kutu6 .kutu6icerik .fa-puzzle-piece {
+    position: absolute;
+    margin-left: -35px;
+    font-size: 30px;
+    color: #686868;
+}
+
+.sayfa .icerik .icerik2 .satir2 .kutu6 .kutu6icerik p{
+    margin-left: 10px;
+}
